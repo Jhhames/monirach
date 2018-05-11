@@ -1,48 +1,222 @@
 body {
-
-  color: #fff; 
-  background: url("../img/touchdown.jpg") no-repeat;
-  background-size: cover; 
-  background-color: rgba(0,0,30, 0.7);
-  background-attachment: fixed;
-  background-blend-mode: overlay; 
-  /*min-height: 1100px;*/
+    background-color: #f2f2f2;
 }
 
-.navbar {
-  border-bottom: #dc3545 3px solid;
-  opacity: 0.8; }
+p {
+    margin: 2px;
+    padding: 1px;
+}
 
-#home-section {
- }
-  #home-section .dark-overlay {
-    /*background-color: rgba(50, 0, 0, 0.7);*/
+.nav-logo {
+    width: 10%;
+}
+
+.navbar-nav .active {
+    font-weight: bold;
+    text-shadow: #777 .5px .5px 4px;
+}
+
+.navbar-nav .active:hover {
+    transform: translateY(-4px);
+    transition: .8s all;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#headSlide {
+    height: 75vh;
+    margin-top: 50px;
+}
+
+
+/* #nav-slant {
+    height: 100%;
+    padding: 20px;
+    background-color: #727272;
+    transform: translateX(24%);
+    padding-right: 25%;
+} */
+
+#background-1 {
+    background-size: cover;
+    background-image: url('../img/boat-business-cargo-70418.jpg');
+    background-color: rgba(00, 0, 100, .7);
+    background-blend-mode: overlay;
+}
+
+#background-2 {
+    background: url('../img/boat-business-cargo-70418.jpg');
+    background-color: rgba(00, 0, 100, .7);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+#background-3 {
+    background-image: url('../img/business-cargo-containers-crate-122164.jpg');
+    background-color: rgba(00, 0, 100, .7);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+.carousel-item {
+    height: 75vh;
+}
+
+#headSlide .carousel-caption {
+    top: 40%;
+    left: 5%;
+    width: 90%;
+}
+
+#head-caption {
+    top: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    display: block;
+    animation: dropTop 1.5s .7s ease-out;
+    animation-fill-mode: backwards;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+#under-caption {
+    font-family: monospace;
+    letter-spacing: 5px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    display: block;
+    font-size: 11px;
+    animation: dropBottom 1.2s 1s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.carousel-control-prev {
+    width: 5%;
+}
+
+.carousel-control-next {
+    width: 5%;
+}
+
+.pproduct-slide.card {
+    transition: all .7s;
+}
+
+.product-slide .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px #777;
+    transition: all .5s;
+}
+
+#search {
+    background-image: url('../img/boat-business-cargo-70418.jpg');
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: overlay !important;
+    background-size: cover;
+    /* height: 25vh; */
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #777 !important;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 20;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 1100px; }
-  #home-section .home-inner {
-    padding-top: 60px; }
-  #home-section .card-form {
-    opacity: 0.8; }
-  #home-section .fa {
-    color: red;
-    background: #fff;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 18px; }
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
-#explore-section .fa, #share-section .fa {
-  color: #fff;
-  background: #333;
-  padding: 2px;
-  border-radius: 5px;
-  font-size: 20px; }
 
-#create-section .fa {
-  color: #008ed6;
-  background: #fff;
-  padding: 4px;
-  border-radius: 5px;
-  font-size: 30px; }
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    /* padding: 20px; */
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@keyframes dropTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
