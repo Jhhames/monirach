@@ -317,14 +317,14 @@
         </div>   
     </section>
 
-    <section id="services">
+    <section id="services" class>
         <div class="container">
             <div class="row">
 
             </div>
         </div>
     </section>
-    
+
 </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
