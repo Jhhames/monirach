@@ -1,5 +1,6 @@
 body {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
+    backface-visibility: hidden;
 }
 
 p {
@@ -9,6 +10,14 @@ p {
 
 .nav-logo {
     width: 10%;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.comic {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .navbar-nav .active {
@@ -48,7 +57,7 @@ p {
 }
 
 #background-2 {
-    background: url('../img/boat-business-cargo-70418.jpg');
+    background: url('../img/automobile-automotive-car-119435.jpg');
     background-color: rgba(00, 0, 100, .7);
     background-blend-mode: overlay;
     background-size: cover;
@@ -73,7 +82,7 @@ p {
 
 #head-caption {
     top: 50%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
     letter-spacing: 5px;
     display: block;
     animation: dropTop 1.5s .7s ease-out;
@@ -101,7 +110,7 @@ p {
     width: 5%;
 }
 
-.pproduct-slide.card {
+.product-slide.card {
     transition: all .7s;
 }
 
@@ -112,16 +121,63 @@ p {
 }
 
 #search {
-    background-image: url('../img/boat-business-cargo-70418.jpg');
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url('../img/background-business-clean-811101.jpg');
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay !important;
     background-size: cover;
     /* height: 25vh; */
 }
 
+#products {
+    background-image: url('../img/agric.jpg');
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay !important;
+    background-size: cover;
+}
+
 .slick-next:before,
 .slick-prev:before {
     color: #777 !important;
+}
+
+.styled-border-left {
+    border-left: black 2px solid !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .styled-border-left {
+        border-left: none !important;
+    }
+}
+
+.styled-border-top {
+    border-top: black 2px inset !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .styled-border-left {
+        border-left: none !important;
+    }
+}
+
+.footer-contact {
+    top: -70%;
+}
+
+@media only screen and (max-width:778px) {
+    .footer-contact {
+        display: none;
+    }
+}
+
+#contact input,
+textarea {
+    border-radius: 0px !important;
+    /* background-color: red; */
+}
+
+#animate {
+    animation: display 1s ease-in-out;
 }
 
 
@@ -154,8 +210,9 @@ p {
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
+    left: 25px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 12px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -218,5 +275,16 @@ p {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes display {
+    0% {
+        opacity: 0;
+        transform: scale(.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
     }
 }
